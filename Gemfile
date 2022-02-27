@@ -46,3 +46,5 @@ group :development do
   # gem "spring"
 end
 
+# HTTP client to api
+gem 'httpclient', '~> 2.8', '>= 2.8.3'
