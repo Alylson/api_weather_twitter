@@ -11,4 +11,10 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  namespace :api do
+    namespace :v1 do
+      get '/auth/twitter/callback' => 'omniauth_callbacks#twitter_response'
+    end
+  end
 end
