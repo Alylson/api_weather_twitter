@@ -1,24 +1,42 @@
-# README
+## Descrição
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Obter algumas características como clima de uma cidade por meio da API 
+[Open Weather Map (OWM)](https://openweathermap.org/api) e [Twitter](https://developer.twitter.com/en/docs/twitter-api) e fazer um tweet 
 
-Things you may want to cover:
+## API - Tecnologia utilizada
 
-* Ruby version
+- Ruby 3.0.0. Ver outras versões disponíveis: https://www.ruby-lang.org/en/downloads/releases/
 
-* System dependencies
+- Framework Rails: 7.0.2. Documentação completa disponível em: https://guides.rubyonrails.org/7_0_release_notes.html
 
-* Configuration
+## Configuração da api
 
-* Database creation
+- Configurar credenciais de acesso ao OWM e Twitter. Para quem usa o VSCode é possível rodar o seguinte comando no terminal: 
+```
+$EDITOR="code --wait" rails credentials:edit
+```
+- Em seguinda informar os valores: 
+```
+open_weather_map:
+  url: 
+  appid: 
 
-* Database initialization
+twitter:
+  consumer_key: 
+  consumer_secret: 
+  access_token: 
+  access_token_secret: 
+```
+- Fazer o download do arquivo de cidades e verificar o id da cidade para ser informado no arquivo weather_controller [Lista de cidades](http://bulk.openweathermap.org/sample/)
 
-* How to run the test suite
+- Na raiz do projeto rodar: 
+```
+$bundle install
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Rotas disponíveis
 
-* Deployment instructions
+###### Fazendo o tweet da temperatura atual
 
-* ...
+    method: GET
+    url: http://localhost:3000/api/V1/weather
