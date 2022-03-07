@@ -1,0 +1,12 @@
+open_weather:
+  image: "alylson/ruby30:v3"
+  ports:
+    - "3000:3000"
+  restart: always
+  environment:
+    TERM: xterm-color
+    RAILS_ENV: development
+  tty: true
+  volumes:
+  - "./caiena:/home"
+  privileged: true
