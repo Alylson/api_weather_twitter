@@ -36,11 +36,10 @@ module Api::V1
     end
 
     def twitter body
-      tweet = Tweet.new()
+      tweet = Tweet.new
       response = tweet.publish_to_twitter(body)
       
-      callback = OmniauthCallbacks.new()
-      callback.twitter_response      
+      redirect_to "/auth/twitter/callback"    
     end    
   end
 end

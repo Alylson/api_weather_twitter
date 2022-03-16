@@ -54,3 +54,6 @@ gem 'rest-client'
 # API twitter
 gem 'twitter', '~> 7.0'
 gem 'omniauth-twitter'
+
+gem 'jwt'
+gem 'bcrypt'
