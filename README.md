@@ -24,9 +24,14 @@ open_weather_map:
 twitter:
   consumer_key: 
   consumer_secret: 
-  access_token: 
-  access_token_secret: 
 ```
+
+Informar os tokens de access e secret access no .env:
+```
+  access_token: 
+  access_token_secret:
+```  
+
 - Fazer o download do arquivo de cidades e verificar o id da cidade para ser informado no arquivo weather_controller [Lista de cidades](http://bulk.openweathermap.org/sample/)
 
 - Na raiz do projeto rodar: 
